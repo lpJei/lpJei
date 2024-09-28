@@ -1,8 +1,14 @@
+#include <iostream>
+#include <thread>
+#include <chrono>
 
-<h1><i> Oh, you're approaching me?</i> Instead of running away, you're coming right to me?</h1>
+int main() {
+    std::string s = "ZA WARUDO!!!";
 
-Currently lurking...
-<!---
-lpJei/lpJei is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+    for (const auto c : s) {
+        std::cout << c << std::flush;
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    }
+    std::cout << std::endl;
+}
